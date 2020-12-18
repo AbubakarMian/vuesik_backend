@@ -63,7 +63,8 @@ class UserController extends Controller
                     ])->get([
                         'access_token',
                         'id',
-                        'name',
+                        'firstname',
+                        'lastname',
                         'email',
                         'avatar',
                         'access_token',
