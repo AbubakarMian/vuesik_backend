@@ -120,7 +120,8 @@ class UserController extends Controller
             // dd($request->all());
             if (!$validator->fails()) {
                 $users = new User();
-                $users->name       = $request->name;
+                $users->firstname= $request->firstname;
+                $users->lastname= $request->lastname;
                 $users->email       = $request->email;
                 // $users->role_id       = 3;
                 $users->password    = Hash::make($request->password);
