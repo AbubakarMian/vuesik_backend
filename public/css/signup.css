@@ -1,0 +1,16 @@
+.loginFeilds input {
+    height: 40px;
+    background: #f0f0f0;
+    color: #000;
+}
+.loginFeilds h1 {
+    color: #191654;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.loginFeilds {
+    padding-top: 10px;
+}
+.loginFeilds h4 a {
+    color: #43c6ac;
+}

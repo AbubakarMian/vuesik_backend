@@ -1,0 +1,97 @@
+.slider-single .slick-prev:before,
+.slider-single .slick-next:before {
+    font-size: 50px!important;
+    color: #fff!important;
+}
+.slider-single .slick-prev,
+.slider-single .slick-next {
+    background: #43c6ac!important;
+    width: 50px!important;
+    height: 50px!important;
+    opacity: 0;
+}
+.slider-single .slick-prev,
+.slider-nav .slick-prev {
+  left:0;
+  z-index: 1;
+}
+.slider-single .slick-next,
+.slider-nav .slick-next {
+  right:0;
+}
+.slider-single:hover .slick-prev, .slider-single:focus .slick-prev,
+.slider-single:hover .slick-next, .slider-single:focus .slick-next {
+  opacity: 1;
+}
+
+.slider-nav .slick-prev,
+.slider-nav .slick-next {
+  height: 80px;
+  background: #43c6ac;
+  z-index: 1;
+  border-radius: 5px 0 0 5px;
+  top: 46%;
+}
+.slider-nav .slick-next {
+  border-radius: 0px 5px 5px 0px;
+}
+.slider-nav .slick-prev:before,
+.slider-nav .slick-next:before {
+    color: #fff!important;
+}
+.slick-next::before {
+    content: "\f105"!important;
+    font-family: FontAwesome!important;
+}
+.slick-prev::before {
+    content: "\f104"!important;
+    font-family: FontAwesome!important;
+}
+.btnsendEmail,
+.btnViewNumber {
+    width: 100%;
+	margin: 8px 0px;
+}
+.formArea .form-control {
+    height: 45px;
+    border-radius: 0px;
+}
+.formArea {
+    background: #f0f0f0;
+    padding: 30px;
+}
+textarea#comment {
+    height: auto;
+}
+.plotDetails {
+    text-align: left;
+}
+.plotDetails span {
+    font-weight: 700;
+}
+.plotDetails div {
+    padding: 10px;
+}
+.propertyDesArea ul li:before {
+    content: "\f101";
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+    left: 0;
+}
+.propertyDesArea ul li {
+    list-style: none;
+}
+.propertyDesArea ul {
+    margin-left: -15px;
+    padding-left: 20px;
+}
+.rigthImgArea img {
+    width: 74%;
+    margin: 0 auto;
+}
+.propertyDescription {
+    padding: 50px 15px;
+}
