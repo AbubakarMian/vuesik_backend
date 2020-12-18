@@ -1,0 +1,47 @@
+.ListingBox .col-sm-4 {
+    padding: 0px;
+}
+.ListingBox {
+    background: #f0f0f0;
+    overflow: hidden;
+    margin: 30px 40px;
+	margin-bottom: 0px;
+}
+.listingHead h2 {
+    color: #43c6ac;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.listingDetails h3 {
+    margin: 10px 0px 5px 0px;
+}
+.listingDetails h1 {
+    margin: 10px 0px 10px 0px;
+}
+.listingHead {
+    border-bottom: 2px solid #43c6ac;
+}
+.listingArea {
+    padding: 0px 30px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.listingSearchArea {
+    background: #191654;
+    color: #fff;
+    padding: 50px 0px;
+}
+.listingSearchArea input {
+    height: 40px;
+    border-radius: 0px;
+    border: 1px solid #43c6ac;
+}
+.listingSearchArea select {
+    height: 40px;
+    border-radius: 0px;
+    border: 1px solid #43c6ac;
+}
+.listingHead a {
+    text-decoration: none;
+}

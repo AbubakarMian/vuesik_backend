@@ -1,0 +1,136 @@
+.projectBanner {
+    background: url(../images/projectbg.jpg) no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+}
+.projectBannerText {
+    text-align: center;
+    background: #ffffffbf;
+    padding: 40px;
+    margin: 10% 10%;
+    border-radius: 10px;
+}
+.projectBannerText h1 {
+    font-weight: 700;
+}
+.industrialArea {
+    text-align: center;
+}
+.plotDetails {
+    text-align: left;
+}
+.plotDetails span {
+    font-weight: 700;
+}
+.plotDetails div {
+    padding: 10px;
+}
+.industrialArea h4 {
+    text-align: left;
+    padding-left: 10px;
+}
+.industrialArea {
+    text-align: center;
+    padding: 50px 0px;
+}
+.industrialArea h1 {
+    color: #43c6ac;
+    font-weight: 800;
+    margin-top: 0px;
+}
+.industrialArea hr {
+    border-top: 1px solid #43c6ac;
+}
+.industrialDescription {
+    padding: 10px;
+}
+.industrialDescriptionArea {
+    padding: 50px 0px;
+    background: #e4e4e4;
+}
+.industrialDescription h3 {
+    font-size: 21px;
+    font-weight: 700;
+}
+.industrialDescription ul li {
+    width: 39%;
+    display: inline-block;
+}
+.industrialDescription ul li:before {
+    content: "\f101";
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+    left: 0;
+}
+.projectFeaturesAreaArea h1 {
+    color: #fff;
+    font-weight: 800;
+    margin-top: 0px;
+    text-align: center;
+}
+.projectFeaturesAreaArea hr {
+    border-top: 1px solid #fff;
+}
+.projectFeaturesData h3 {
+       font-size: 21px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+.projectFeaturesAreaArea {
+    background: #191654;
+    color: #fff;
+    padding: 50px 0px;
+}
+.projectFeaturesData ul.pointsDiveide li {
+    width: 49%;
+    display: inline-block;
+	    margin-bottom: 10px;
+}
+.projectFeaturesData ul li {
+    width: 100%;
+    display: inline-block;
+	    margin-bottom: 10px;
+}
+.projectFeaturesData ul img,
+ul.pointsDiveide img {
+    width: 46px;
+    margin-right: 15px;
+}
+.projectFeaturesData {
+    padding: 10px;
+}
+.propertyDetails div {
+    padding: 10px;
+}
+.propertyDetails span {
+    font-weight: 700;
+}
+.propertyArea h1 {
+    font-weight: 800;
+    margin-top: 0px;
+}
+.propertyArea {
+    padding: 50px 30px;
+}
+.galleryArea {
+    padding: 30px 0px;
+}
+.propertyArea hr {
+    border-top: 1px solid #000;
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.industrialDescription ul li {
+    width: 100%;
+    display: inline-block;
+}
+.projectFeaturesData ul.pointsDiveide li {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+}
