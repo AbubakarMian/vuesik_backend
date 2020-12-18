@@ -15,8 +15,10 @@ class AdminSeeder extends Seeder
     {
         User::firstOrCreate([
         
-            'name' => 'Admin',
+            'firstname' => 'Admin',
+            'lastname' => 'Admin',
             'username' => 'admin',
+            'dob' => '2020-12-16',
             'email' => 'admin@mail.com',
             'role_id' => '1',
             'password' => Hash::make('abc123')
