@@ -123,7 +123,7 @@ class UserController extends Controller
                 $users->firstname= $request->firstname;
                 $users->lastname= $request->lastname;
                 $users->email       = $request->email;
-                // $users->role_id       = 3;
+                $users->role_id       = 2;
                 $users->password    = Hash::make($request->password);
                 $users->access_token = uniqid();
                 $users->device_type = $request->header('client-id');
