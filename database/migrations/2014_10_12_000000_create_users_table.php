@@ -38,7 +38,7 @@ class CreateUsersTable extends Migration
             $table->string('firstname', 50);
             $table->string('lastname', 50);
             $table->string('username', 100)->nullable()->default(null);
-            $table->date('dob')->nullable()->default(null);
+            $table->date('dob')->nullable()->nullable()->default(null);
             $table->string('phone_number',20)->nullable()->default(null);
             $table->string('bio')->nullable()->default(null);
             $table->string('instagram',100)->nullable()->default(null);
