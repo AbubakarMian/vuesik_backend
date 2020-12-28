@@ -30,7 +30,7 @@ trait APIResponse
 		$res->error = $error;
 // dd('asd');
 // dd(json_encode($status, $res));
-    	return json_encode($res);
+    	return response(json_encode($res));
     }
 
 }

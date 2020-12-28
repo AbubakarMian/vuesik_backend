@@ -19,11 +19,21 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('signup', 'Services\UserController@signUp');
-Route::post('login', 'Services\UserController@login');
+
+Route::group(['middleware'=>'auth.client'],function(){
+
+    Route::post('signup', 'Services\UserController@signUp');
+    Route::post('login', 'Services\UserController@login');
+});
+
+Route::group(['middleware'=>'auth.token'],function(){
+    Route::post('video', 'Services\UserController@video');
+});
+
+
 Route::post('logout', 'Services\UserController@logout');
 Route::GET('home', 'Services\UserController@home');
-Route::post('video', 'Services\UserController@video');
+
 Route::post('videocomments', 'Services\UserController@videocomments');
 Route::post('videomention', 'Services\UserController@videomention');
 Route::post('tag', 'Services\UserController@tag');

@@ -17,6 +17,7 @@ class CreateClientTable extends Migration
             $table->unsignedBigInteger('id', true)->length(20);
             $table->string('client_id', 255);
             $table->string('client_secret', 255);
+            $table->timestamps();
         });
     }
 
