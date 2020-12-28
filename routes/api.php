@@ -28,12 +28,13 @@ Route::group(['middleware'=>'auth.client'],function(){
 
 Route::group(['middleware'=>'auth.token'],function(){
     Route::post('video', 'Services\UserController@video');
+   
 });
 
 
 Route::post('logout', 'Services\UserController@logout');
-Route::GET('home', 'Services\UserController@home');
 
+Route::get('home', 'Services\UserController@home');
 Route::post('videocomments', 'Services\UserController@videocomments');
 Route::post('videomention', 'Services\UserController@videomention');
 Route::post('tag', 'Services\UserController@tag');
@@ -47,7 +48,7 @@ Route::post('videotag', 'Services\UserController@videotag');
 Route::post('hashtag', 'Services\UserController@hashtag');
 Route::post('userslist', 'Services\UserController@userslist');
 Route::post('videoslist', 'Services\UserController@videoslist');
-Route::post('audiolist', 'Services\UserController@audiolist');
+Route::post('audiolist', 'Services\UserController@a b udiolist');
 Route::post('likelist', 'Services\UserController@likelist');
 
 

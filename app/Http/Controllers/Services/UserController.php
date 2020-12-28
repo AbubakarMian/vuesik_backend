@@ -159,16 +159,15 @@ class UserController extends Controller
 
     public function home()
     {
-        # code...
-        $profile=Video::all();
-        return $this->sendResponse(200, $profile);
+      
+        $video=Video::with('video_owner')->get();
+        return $this->sendResponse(200, $video);
     }
     
     public function video(Request $request)
     {
-        return $user = $request->get('user');
-        // dd($request->get('user')->firstname);
-        # code...
+        $user = $request->get('user');
+
         $video=new Video();
         $video->user_id=$request->userId;
         $video->url=$request->url;
@@ -178,7 +177,7 @@ class UserController extends Controller
         $video->total_like=0;
         $video->not_interested=0;
         $video->is_public=1;
-        // $video->user_id= $user->id;
+        $video->user_id= $user->id;
         $video->Save();
         
         // $videos=Video::where('id',$request->video_id)->get();
