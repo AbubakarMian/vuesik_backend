@@ -14,7 +14,7 @@ class AdminSeeder extends Seeder
     public function run()
     {
         User::firstOrCreate([
-        
+            'id'=>1,
             'firstname' => 'Admin',
             'lastname' => 'Admin',
             'username' => 'admin',

@@ -117,7 +117,7 @@ class UserController extends Controller
        
         try {
             $validator = Validator::make($request->all(), User::$rules);
-            // dd($request->all());
+         
             if (!$validator->fails()) {
                 $users = new User();
                 $users->firstname= $request->firstname;
@@ -129,6 +129,7 @@ class UserController extends Controller
                 $users->device_type = $request->header('client-id');
                 // $users->device_TYPE ='12344';
                 // $users->settings_id ='12344';
+                $users->Save();
             } else {
 
                 return $this->sendResponse(
@@ -139,13 +140,13 @@ class UserController extends Controller
                 );
             }
 
-            if ($users->save()) {
-                $users = User::find($users->id, [
-                    // 'id', 'name', 'email', 'avatar', 'access_token', 'get_notification'
-                    'id','email',
+            if (true) {
+                $users = User::find(2, [
+                    'id','firstname','lastname','username', 'email', 'avatar','followers', 'access_token',
+                    
                 ]);
                 $users->get_notification = ($users->get_notification ? true : false);
-                return $this->sendResponse(200, $users);
+                return $this->sendResponse(200, 'User registered successfully');
             }
         } catch (\Exception $e) {
             return $this->sendResponse(
@@ -165,11 +166,23 @@ class UserController extends Controller
     
     public function video(Request $request)
     {
-    
+        return $user = $request->get('user');
+        // dd($request->get('user')->firstname);
         # code...
-        // dd($request->all());
-        $videos=Video::where('id',$request->video_id)->get();
-        return $this->sendResponse(200, $videos);
+        $video=new Video();
+        $video->user_id=$request->userId;
+        $video->url=$request->url;
+        $video->is_public=$request->is_pubic;
+        $video->detail=$request->detail;
+        $video->total_views=0;
+        $video->total_like=0;
+        $video->not_interested=0;
+        $video->is_public=1;
+        // $video->user_id= $user->id;
+        $video->Save();
+        
+        // $videos=Video::where('id',$request->video_id)->get();
+        return $this->sendResponse(200);
     }
 
     public function videocomments(Request $request)
@@ -236,7 +249,7 @@ class UserController extends Controller
             if ($request->name) {
               
                 // dd($user->name);
-                $user->name = $request->name;
+                // $user->name = $request->name;
                  
             }
             if ($request->name) {
@@ -266,7 +279,7 @@ class UserController extends Controller
                  
             }
            
-            $user->save();
+            // $user->save();
 
             $response = new \stdClass();
             $response->access_token = $user->access_token;

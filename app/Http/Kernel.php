@@ -21,6 +21,10 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        // My custom middleware for general information logging a
+        \App\Http\Middleware\CustomLog::class,
+        // My custom middleware for setting Application Locale
+        \App\Http\Middleware\AppLocale::class,
     ];
 
     /**
@@ -64,7 +68,15 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-         // validate for user or client
-         'auth.client_token' => \App\Http\Middleware\ClientOrAutherizationToken::class,
+         // Custom client credentials
+        'auth.client' => \App\Http\Middleware\ValidateClient::class,
+        // Admin auth check
+        'auth.admin' => \App\Http\Middleware\AdminAuthCheck::class,
+        // User token validation
+        'auth.token' => \App\Http\Middleware\ValidateToken::class,
+        // validate for user or client
+        'auth.client_token' => \App\Http\Middleware\ClientOrAutherizationToken::class,
+        // Admin Basic Check for Login and back button
+        'admin_basic' => \App\Http\Middleware\AdminAuthCheck::class,
     ];
 }
