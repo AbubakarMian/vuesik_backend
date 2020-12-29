@@ -30,16 +30,15 @@ class ValidateClient
                     ->where('client_id', $client_id)
                     ->where('client_secret', $client_secret)
                     ->first();
-                    // dd($client);
-                    
+
         if($client){
             return $next($request);
             
         }
 throw new UnAuthorizedRequestException;
     	try{
-            // dd('asd');
             
+          
             
     	}
 
