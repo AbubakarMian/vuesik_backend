@@ -18,6 +18,7 @@ class CreateVideoTagTable extends Migration
             $table->bigInteger('video_id');
             $table->bigInteger('tag_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -18,6 +18,7 @@ class CreateUserFollowedTable extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('followed_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

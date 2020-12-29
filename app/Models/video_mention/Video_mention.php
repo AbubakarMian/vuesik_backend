@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Video_mention extends Model
 {
+    use SoftDeletes;
     protected $table="video_mention";
 
     public function mention_user()

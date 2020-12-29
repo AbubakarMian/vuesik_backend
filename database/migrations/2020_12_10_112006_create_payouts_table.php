@@ -19,6 +19,7 @@ class CreatePayoutsTable extends Migration
             $table->date('payed_date');
             $table->string('payed_amount');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

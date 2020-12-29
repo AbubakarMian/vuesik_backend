@@ -14,37 +14,18 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            // $table->id();
-            // $table->string('name');
-            // $table->string('email')->unique();
-            // $table->bigInteger('is_public');
-            // $table->Integer('total_followers');
-            // $table->Double('lat');
-            // $table->Double('long');
-            // $table->timestamp('email_verified_at')->nullable();
-            // $table->string('password');
-            // $table->rememberToken();
-            // $table->timestamps();
-
-            // $table->bigIncrements('id');
-            // $table->string('device_id',50);
-            // $table->string('settings_id');
-            // $table->string('email')->unique();
-            // $table->string('password', 255)->nullable()->default(null);
-            // $table->rememberToken();
-            // $table->timestamps();
-            // $table->softDeletes();
+            
             $table->bigIncrements('id');
             $table->string('firstname', 50);
             $table->string('lastname', 50);
             $table->string('username', 100)->nullable()->default(null);
-            $table->date('dob')->nullable()->nullable()->default(null);
+            $table->date('dob')->nullable()->default(null);
             $table->string('phone_number',20)->nullable()->default(null);
             $table->string('bio')->nullable()->default(null);
             $table->string('instagram',100)->nullable()->default(null);
             $table->string('youtube',100)->nullable()->default(null);
-            $table->string('followers')->nullable()->default(0);
-            $table->string('likes')->nullable()->default(0);
+            $table->integer('followers')->nullable()->default(0);
+            $table->integer('likes')->nullable()->default(0);
             $table->string('email', 100)->unique();
             $table->string('password', 255)->nullable()->default(null);
             $table->string('avatar', 255)->nullable()->default(null);

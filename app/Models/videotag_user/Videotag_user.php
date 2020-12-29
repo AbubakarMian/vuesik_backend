@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Videotag_user extends Model
 {
-    //
+    use SoftDeletes;
+    protected $table="videotag_user";
 }

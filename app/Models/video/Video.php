@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Video extends Model
 {
-    // use SoftDeletes;
+    use SoftDeletes;
     protected $table = "videos";
 
     public function comments()

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment_like extends Model
 {
+    use SoftDeletes;
     protected $table="comments_like";
 
     public function user()

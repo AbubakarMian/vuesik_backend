@@ -18,6 +18,7 @@ class CreateVideoLikesTable extends Migration
             $table->bigInteger('video_id');
             $table->bigInteger('user_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

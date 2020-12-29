@@ -18,6 +18,7 @@ class CreateClientTable extends Migration
             $table->string('client_id', 255);
             $table->string('client_secret', 255);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

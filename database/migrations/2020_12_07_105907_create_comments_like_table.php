@@ -17,6 +17,7 @@ class CreateCommentsLikeTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('comment_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

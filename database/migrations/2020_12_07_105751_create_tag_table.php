@@ -18,6 +18,7 @@ class CreateTagTable extends Migration
             $table->string('tag');
             $table->string('avatar');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

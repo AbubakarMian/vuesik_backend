@@ -16,8 +16,9 @@ class CreateUserNotificationTable extends Migration
         Schema::create('user_notification', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
-            $table->string('notificationbyuser_id');
+            $table->bigInteger('notificationbyuser_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
