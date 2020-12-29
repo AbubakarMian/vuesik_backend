@@ -25,7 +25,7 @@ class ValidateClient
     	$authorization_header = $request->header('Authorization');
     	$authorization_header = $authorization_header ?? $request->header('Authorization-secure');
     	$client_secret = str_replace("Basic ", "", $authorization_header);
-           dd("ok");
+        
         $client = DB::table('client')
                     ->where('client_id', $client_id)
                     ->where('client_secret', $client_secret)
