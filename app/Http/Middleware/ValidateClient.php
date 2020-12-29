@@ -33,7 +33,7 @@ class ValidateClient
 
         if($client){
             return $next($request);
-            
+                        
         }
 throw new UnAuthorizedRequestException;
     	try{
