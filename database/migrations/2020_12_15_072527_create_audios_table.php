@@ -23,6 +23,7 @@ class CreateAudiosTable extends Migration
             $table->Integer('total_like');
             $table->Integer('not_interested');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

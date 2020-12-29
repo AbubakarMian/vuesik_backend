@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
+    use SoftDeletes;
     protected $table="tag";
     public function video()
     {

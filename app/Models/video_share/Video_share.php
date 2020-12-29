@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Video_share extends Model
 {
-    //
+    use SoftDeletes;
+    protected $table="video_share";
 }

@@ -18,6 +18,7 @@ class CreateVideoMentionTable extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('video_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

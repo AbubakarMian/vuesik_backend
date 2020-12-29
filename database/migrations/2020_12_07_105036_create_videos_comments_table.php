@@ -19,9 +19,10 @@ class CreateVideosCommentsTable extends Migration
             $table->bigInteger('video_id');
             $table->string('comment');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
-
+ 
     /**
      * Reverse the migrations.
      *

@@ -18,6 +18,7 @@ class CreateHashtagsTable extends Migration
             $table->string('name');
             $table->integer('count');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

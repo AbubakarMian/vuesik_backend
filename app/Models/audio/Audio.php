@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Audio extends Model
 {
+    use SoftDeletes;
     protected $table="audios";
 
     function audio_owner()
