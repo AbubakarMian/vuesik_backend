@@ -217,10 +217,8 @@ class UserController extends Controller
     {
        
         # code...
-        return $profile=User::with('uservideos')->where('id',$request->id)->get();
-        // $profile=User::where('id',$request->id)->get();
-        // $videos=Video::where('user_id',$request->id)->get();
-        // return $this->sendResponse(200, $profile,$videos);
+        $profile=User::with('uservideos')->where(12,$request->id)->get();
+        return $this->sendResponse(200, $profile);
     }
 
 
