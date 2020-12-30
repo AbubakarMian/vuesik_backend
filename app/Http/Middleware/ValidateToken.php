@@ -33,6 +33,8 @@ class ValidateToken
         
 //        $authorization = apache_request_headers()["Authorization"];
         $authorization = $request->header('Authorization');
+        $authorization = $authorization ?? $request->header('Authorization-Secure');
+
 
         $access_token = str_replace("Bearer ", "", $authorization);
 
