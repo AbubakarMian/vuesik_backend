@@ -3,7 +3,7 @@
 namespace App\Models\video_mention;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Video_mention extends Model
 {
     use SoftDeletes;

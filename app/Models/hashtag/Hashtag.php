@@ -3,7 +3,7 @@
 namespace App\Models\hashtag;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Hashtag extends Model
 {
     use SoftDeletes;
