@@ -3,7 +3,7 @@
 namespace App\Models\comment_likes;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Comment_like extends Model
 {
     use SoftDeletes;
