@@ -12,11 +12,12 @@ use App\Models\tag\Tag;
 use App\Models\user_followed\User_followed as User_followedUser_followed;
 use App\Models\video\Video;
 use App\Models\video_mention\Video_mention;
+use App\Models\video_comments\Video_comments;  
 use App\Models\video_tags\video_tags;
 use App\tags\Tags;
 use App\User;
 use App\Models\user_followed\user_followed;
-use App\Models\video_comments\Video_Comments;
+
 use Egulias\EmailValidator\Warning\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -187,10 +188,14 @@ class UserController extends Controller
     public function videocomments(Request $request)
     {
        
-        # code...
-        // dd($request->all());
-        $comments=Video_Comments::where('video_id',$request->video_id)->get();
-        return $this->sendResponse(200, $comments);
+        // return $user = $request->get('user');
+        
+        //  $comments=Video_comments::all();
+        $comments=new Video_comments();
+        // $comments
+        // $comments=Video_comments::where('video_id',$request->video_id)->get();
+        // return $this->sendResponse(200, $comments);
+       
     }
     
     public function videomention(Request $request)
@@ -376,6 +381,7 @@ class UserController extends Controller
 
     public function comment_list(Request $request)
     {
+        
         # code...
         return $comments_list=Comment_like::where('comment_id',$request->id)->with(['user','video'])->get();
     }
